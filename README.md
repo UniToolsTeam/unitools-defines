@@ -14,8 +14,6 @@ This packages helps to work with a custom define symbols inside Unity Editor.
 
 > You will need to have git installed and set in your system PATH.
 
-> Check package [dependencies](https://github.com/Rinal/unitools-build/blob/master/package.json)
-
 Add the following to `Packages/manifest.json` where x.x.x the version (tag) check [Latest Releases](../../releases/latest):
 
 ```
