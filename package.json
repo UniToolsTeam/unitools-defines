@@ -3,14 +3,10 @@
   "name": "com.unitools.defines",
   "version": "0.0.0",
   "unity": "2019.1",
-  "description": "Defines",
+  "description": "Tool to set custom define symbols in Unity3D",
   "keywords": [
-    "unity",
     "unity3d",
-    "cli",
-    "CI",
-    "CD",
-    "C#"
+    "unity-tool"
   ],
   "category": "Libraries",
   "type": "library"
