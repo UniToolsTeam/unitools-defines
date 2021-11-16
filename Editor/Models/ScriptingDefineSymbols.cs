@@ -9,13 +9,13 @@ namespace UniTools.Defines
         fileName = nameof(ScriptingDefineSymbols),
         menuName = nameof(UniTools) + "/" + nameof(Defines) + "/" + nameof(ScriptingDefineSymbols)
     )]
-    public sealed class ScriptingDefineSymbols : BaseScriptingDefineSymbols
+    public sealed class ScriptingDefineSymbols : ScriptableObject
     {
         [SerializeField] private List<string> m_defines = new List<string>();
 
-        public override void Apply(BuildTargetGroup buildTargetGroup)
+        public void Apply(BuildTargetGroup buildTargetGroup)
         {
-            base.Apply(buildTargetGroup);
+            PlayerSettings.SetScriptingDefineSymbolsForGroup(buildTargetGroup, ToString());
         }
 
         public override string ToString()
