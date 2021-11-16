@@ -6,12 +6,12 @@ using UnityEngine;
 namespace UniTools.Defines
 {
     [CreateAssetMenu(
-        fileName = nameof(ScriptingDefineSymbols),
-        menuName = nameof(UniTools) + "/" + nameof(Defines) + "/" + nameof(ScriptingDefineSymbols)
+        fileName = nameof(ScriptingCompositeDefineSymbols),
+        menuName = nameof(UniTools) + "/" + nameof(Defines) + "/" + nameof(ScriptingCompositeDefineSymbols)
     )]
-    public sealed class ScriptingDefineSymbols : BaseScriptingDefineSymbols
+    public sealed class ScriptingCompositeDefineSymbols : BaseScriptingDefineSymbols
     {
-        [SerializeField] private List<string> m_defines = new List<string>();
+        [SerializeField] private List<ScriptingDefineSymbols> m_defines = new List<ScriptingDefineSymbols>();
 
         public override void Apply(BuildTargetGroup buildTargetGroup)
         {
@@ -26,10 +26,10 @@ namespace UniTools.Defines
 
             for (int i = 0; i < last; i++)
             {
-                builder.Append(m_defines[i]).Append(";");
+                builder.Append(m_defines[i].ToString()).Append(";");
             }
 
-            builder.Append(m_defines[last]);
+            builder.Append(m_defines[last].ToString());
 
             return builder.ToString();
         }
