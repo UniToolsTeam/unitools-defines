@@ -1,3 +1,5 @@
+# This tool is legacy and not supported anymore, please use [UniTools Build](https://github.com/UniToolsTeam/unitools-build)
+
 # UniTools Defines
 This packages helps to work with a custom define symbols inside Unity Editor.
 
